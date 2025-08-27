@@ -1,0 +1,22 @@
+---
+version: 0.1
+autosplit: true
+
+concurrency: 2
+runson: mac
+
+runtime:
+  language: node
+  version: 18
+
+pre:
+  - npm install
+
+testDiscoveryCommand:
+  mode: static
+  type: raw
+  command: ls "test/specs/*.spec.js"
+
+testRunnerCommand: npx wdio wdio.lambdatest.conf.js --spec=test/specs/*.spec.js
+
+jobLabel: [HyperExecute, BiDi, Linux]

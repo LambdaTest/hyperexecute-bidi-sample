@@ -1,0 +1,17 @@
+{
+  "name": "HyperExecte-BiDi-Project",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/cli": "latest",
+    "@wdio/local-runner": "latest",
+    "@wdio/mocha-framework": "latest",
+    "@wdio/spec-reporter": "latest"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.lambdatest.conf.js"
+  },
+  "dependencies": {
+    "wdio-lambdatest-service": "latest",
+    "webdriver": "latest"
+  }
+}

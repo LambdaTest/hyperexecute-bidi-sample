@@ -12,11 +12,11 @@ runtime:
 pre:
   - npm install
 
-testDiscoveryCommand:
+testDiscovery:
   mode: static
   type: raw
-  command: ls "test/specs/*.spec.js"
+  command: echo "test/specs/BrowsingContext.spec.js"
 
-testRunnerCommand: npx wdio wdio.lambdatest.conf.js --spec=test/specs/*.spec.js
+testRunnerCommand: npx wdio wdio.lambdatest.conf.js --spec=test/specs/BrowsingContext.spec.js
 
-jobLabel: [HyperExecute, BiDi, Linux]
+jobLabel: [HYP, BiDi, win]
